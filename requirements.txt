@@ -1,15 +1,16 @@
 pip==23.0
-click==7.1.2
-colorama==0.4.5
+click==8.0.4
+colorama==0.4.6
 Flask==1.1.4
 gunicorn==20.1.0
-itsdangerous==1.1.0
+itsdangerous==2.0.1
 Jinja2==2.11.3
 MarkupSafe==2.0.1
 pillow==8.4
---find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.11.0+cpu
+pytorch==1.12.1
 pytorch-lightning==1.8.3
-torchmetrics==0.10.3
-torchvision==0.12.0+cpu
-Werkzeug==1.0.1
+torchinfo==1.7.2
+torchmetrics==0.11.1
+torchvision==0.2.2
+torchviz==0.0.2
+Werkzeug==2.0.3
