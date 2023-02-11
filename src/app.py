@@ -11,14 +11,14 @@ def predict(img):
     # ネットワークの準備
     net = Net().cpu().eval()
     # # 学習済みモデルの重み（dog_cat.pt）を読み込み
-#    net.load_state_dict(torch.load('./src/dog_cat.pt', map_location=torch.device('cpu')))
-    net.load_state_dict(torch.load('./dog_cat.pt', map_location=torch.device('cpu')))
+    net.load_state_dict(torch.load('./src/dog_cat.pt', map_location=torch.device('cpu')))
     #　データの前処理
     img = transform(img)
     img =img.unsqueeze(0) # 1次元増やす
     #　推論
     y = torch.argmax(net(img), dim=1).cpu().detach().numpy()
     return y
+
 
 #　推論したラベルから犬か猫かを返す関数
 def getName(label):
